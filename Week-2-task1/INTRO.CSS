@@ -1,0 +1,34 @@
+.table-color{
+    color: blue;
+    padding: 3px;
+}
+.table-data{
+    color: red;
+}
+.table{
+    position: relative;
+    left: 8px;
+}
+.header{
+    background-color: blueviolet;
+    text-align: center;
+    padding: 20px;
+}
+.topnavbar{
+    overflow: hidden;
+    background-color: aquamarine;
+}
+.topnav-a{
+    float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.ord-list{
+    color: blueviolet;
+}
+.bg-container{
+    background-image:url("")
+}
