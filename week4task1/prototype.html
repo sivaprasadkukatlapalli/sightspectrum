@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+//function Person(first, last, age, eye) {
+  //this.firstName = first;
+  //this.lastName = last;
+  //this.age = age;
+  //this.eyeColor = eye;
+//}
+
+// const my= new Person("siva", "prasad", 22, "green");
+//const myfriend = new Person("nag", "nagendra", 22, "red");
+
+//document.getElementById("demo").innerHTML =
+//"I AM  " + my.age + ". My friend is " + myfriend.age; 
+//
+<h2>JavaScript Objects</h2>
+
+<p>The prototype property allows you to add new methods to objects constructors:</p>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+Person.prototype.nationality = "indian";
+
+const myFather = new Person("John", "Doe", 50, "blue");
+document.getElementById("demo").innerHTML =
+"The nationality of my father is " + myFather.nationality; 
+</script>
+
+</body>
+</html>
