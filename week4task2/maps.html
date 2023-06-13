@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sample"></p>
+    <p id="sample1"></p>
+    <p id="sample2"></p>
+    <script>
+        const cars = new Map([
+        ["Toyota",100000],
+        ["Honda", 200000],
+        ["Toyota Corolla", 3000000],
+        ["Mercedes-Benz",4000000],
+        ["Nissan", 4000000],
+        ["Bmw",500000],
+        ["Audi",6000000],
+        ["Hyundai Creta",7000000],
+        ["Maruti Suzuki Brezza",50000000],
+        ]);
+        let text="";
+        for(const x of cars.entries()){
+            text +=x + "<br>";
+        }
+        document.getElementById("sample2").innerHTML=text;
+
+        cars.delete("Honda")
+        document.getElementById("sample").innerHTML=cars.get("Toyota");
+        document.getElementById("sample").innerHTML=cars.size;
+        let text = "";
+
+    </script>
+</body>
+</html>

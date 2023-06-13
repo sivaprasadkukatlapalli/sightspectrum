@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sample"></p>
+    <p id="sample1"></p>
+    <p id="sample2"></p>
+    <p id="sample3"></p>
+    <script>
+        const s1 = [1996,1997,1998,1999,2000,];
+        const s2 = [2000,20001,2002,2003,2004,];
+        const s3 = [2005,2006,2007,2008,20009];
+        const s4 = [2010,2011,2012,2013,2014];
+        const s5 = [2015,2016,2017,2018,2019];
+        const s6 = [2015,2016,2017,2018,2019];
+        const s7 = [2020,2021,2022,2023,];
+        const year=[...s1, ...s2, ...s3, ...s4, ...s5, ...s6, ...s7];
+        document.getElementById("sample").innerHTML=year;   
+
+        const num = [20,89,67,9,25,38];
+        let maxNum = Math.max(...num);
+        document.getElementById("sample1").innerHTML= maxNum;
+        let minNum = Math.min(...num);
+        document.getElementById("sample2").innerHTML= minNum;
+
+        const  company = ["amazon", "flipkart","meesho","primeamazon videos"];
+        let text ="";
+        for(let x of company){
+            text += x + "";
+            document.getElementById("sample3").innerHTML=text;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sample"></p>
+    <script>
+        const ghost = new Set();
+        ghost.add("dracula,");
+        ghost.add("mommy,");
+        ghost.add("virupaksha,");
+        ghost.add("bhoo,");
+        ghost.add("gayatri.");
+        const x =ghost.entries()
+        let text="";
+         for (const x of ghost.keys()){
+            text += x ;
+         }
+         document.getElementById("sample").innerHTML=text;
+    </script>
+</body>
+</html>
