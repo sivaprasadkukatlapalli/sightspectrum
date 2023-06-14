@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id ="sample"> thi is siva !</p>
+    <button onclick="myfunction()">click here!</button>
+    <script>
+        function myfunction(){
+            let name = document.getElementById("sample").innerHTML;
+            document.getElementById("sample").innerHTML=name.replace(/siva/i,"prasad");
+        }
+    </script>
+
+    
+</body>
+</html>
