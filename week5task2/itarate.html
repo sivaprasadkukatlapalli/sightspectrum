@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myIterable = {
+  data: ['apple', 'banana', 'cherry'],
+  [Symbol.iterator]() {
+    let index = 0;
+
+    return {
+      next: () => {
+        if (index < this.data.length) {
+          return { value: this.data[index++], done: false };
+        } else {
+          return { done: true };
+        }
+      }
+    };
+  }
+};
+
+// Looping over the iterable object
+for (const item of myIterable) {
+  console.log(item);
+}
+    </script>
+</body>
+</html>

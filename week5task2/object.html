@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <p id="sample"></p> 
+    <script>
+        var person = {};
+        person.name = "sivaprasad";
+        person.age = 25,
+        console.log( person.name , person.age);
+
+        var man = {};
+        man['name'] = "sivaprasad";
+        man['age'] = 18,
+        console.log( man.name , man.age);
+
+        var person1 = {
+            name : "sivaji chatrapathi",
+            age : 32,
+            sayhello : function(){
+                console.log("hi! this is:" + person1.name);
+                console.log("chatrapathi sivaji age is:" + person1.age);
+            }
+        };
+            person1.sayhello();
+
+
+
+
+
+            var calculator = {
+  add: function(num1, num2) {
+    return num1 + num2;
+  }
+};
+var result = calculator.add(5, 3);
+console.log(result);   // Output: 8
+
+
+
+
+var animal = {
+    sound : "unknown",
+    makesound : function(){
+        console.log(" the animal makes sound:" +this.sound);
+    }
+};
+var cat = Object.create(animal);
+cat.sound = 'meow';
+cat.makesound();
+
+
+
+const obj = {
+     firstName: 'John',
+     lastName: 'Doe',
+     get fullName() {
+       return this.firstName + ' ' + this.lastName;
+     }
+   };
+
+   console.log(obj.fullName); 
+
+
+
+
+
+   

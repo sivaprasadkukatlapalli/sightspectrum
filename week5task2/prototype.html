@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object constructor
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+// Adding a method to the prototype
+Person.prototype.fullName = function() {
+  return this.firstName + ' ' + this.lastName;
+};
+
+// Creating an instance of Person
+const john = new Person('sivaji', 'chatrapathi');
+
+// Accessing the fullName method
+console.log(john.fullName()); // Output: John Doe
+
+// Accessing the prototype of john
+const johnPrototype = Object.getPrototypeOf(john);
+console.log(johnPrototype === Person.prototype); // 
+    </script>
+</body>
+</html>
