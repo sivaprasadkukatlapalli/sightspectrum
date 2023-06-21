@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  // Method defined on the class
+  calculateArea() {
+    return this.width * this.height;
+  }
+}
+
+// Creating an instance of the class
+const rect = new Rectangle(5, 10);
+
+// Accessing properties and calling methods
+console.log(rect.width); // Output: 5
+console.log(rect.calculateArea()); // Output: 50
+    </script>
+</body>
+</html>
