@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     // Parent class
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log(`${this.name} is eating.`);
+  }
+}
+
+// Child class inheriting from Animal
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Call the constructor of the parent class
+
+    this.breed = breed;
+  }
+
+  bark() {
+    console.log(`${this.name} is barking.`);
+  }
+}
+
+// Create an instance of the child class
+const myDog = new Dog('Max');
+
+// Access methods from the parent class
+myDog.eat(); // Output: Max is eating.
+
+// Access methods from the child class
+myDog.bark(); // Output: Max is barking.
+
+    </script>
+</body>
+</html>

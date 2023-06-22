@@ -1,0 +1,11 @@
+.containerr{
+    background-color: yellow;
+    width:700px;
+    height:350px;
+}
+.container{
+    background-image: url('./Asserts/green.jpg');
+    height:100vh;
+     background-size: cover;
+   
+}
