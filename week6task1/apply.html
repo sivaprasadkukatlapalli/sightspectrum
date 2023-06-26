@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet(message) {
+  console.log(`${message}, ${this.name}!`);
+}
+
+const person = {
+  name: 'chatrpathi'
+};
+
+greet.apply(person, ['this is siva prasad ']);
+    </script>
+</body>
+</html>
