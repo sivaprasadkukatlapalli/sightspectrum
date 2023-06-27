@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const url = 'https://api.example.com/data';
+const data = {
+  key1: 'value1',
+  key2: 'value2'
+};
+
+fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+})
+  .then(response => {
+    // Handle the response
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Request failed');
+    }
+  })
+  .then(responseData => {
+    // Work with the response data
+    console.log(responseData);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error(error);
+  });
+
+    </script>
+</body>
+</html>
