@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person(name,age)
+        {
+            this.name= name;
+            this.age = age;
+        }
+        person.prototype.sayhello = function()
+        {
+            console.log(this.name+" "+"hi ! how are you ?"+this.age+"are old");
+        }
+        var p1 = new person( "siva prsad",25);
+        var p2 = new person( "raj",28);
+        var p3 = new person( "raghu",23);
+        p1.sayhello();
+        p2.sayhello();
+        p3.sayhello();
+
+        
+        
+    </script>
+</body>
+</html>
