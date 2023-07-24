@@ -1,0 +1,41 @@
+.bg-container{
+    background-image: url("C:/Users/SSLTP11524/Desktop/SIGHTSPECTRUM/TASK1.HTML/javascriptcodes/bom/class/MINIPROJECTS/mini1.jpg");
+    background-size: cover;
+    height:100vh;
+    width: ;
+}
+.heading{
+    padding-top: 75px;
+    margin: 0;
+}
+.marque-text{
+    color:#CF4813;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    padding-bottom: 8px;
+    direction:right;
+    width:75%;
+
+}
+li{
+    display:inline;
+    padding: 8px;
+    float: left;
+}
+a{
+    display:block;
+    padding:8px;
+    text-decoration: none;
+}
+.sec-image{
+    background-image: url("C:/Users/SSLTP11524/Desktop/SIGHTSPECTRUM/TASK1.HTML/javascriptcodes/bom/class/MINIPROJECTS/flower.jpeg");
+    height: fit-content;
+    width: fit-content;
+    background-size: cover;
+}
+.text-desig{
+    color: #56aeff;
+    font-family: 'Times New Roman';
+    font-size: x-large;
+    font-weight: bold;
+}
