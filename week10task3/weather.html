@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="bg-container">
+        <div class="card-container">
+            <h2>WEATHER APP</h2>
+            <div class="input">
+                <input type="text" id="weather" placeholder="search...,">
+                <input type="button" value="Get" id="btn"></input>
+        </div>
+        <div class="info">
+            <img src="C:\Users\SSLTP11524\Downloads\weather.png" height="120px" width="260px"/>
+            <div class="temp"><span id="temp-value">25</span></div>
+            <div class="temp"><span id="unit">#11242</span></div>
+            <div class="weather-desc" id="weather-de">Haze</div>
+            <div class="location" id="locat">vijayawada</div>
+        </div>
+     </div>
+    </div>
+    <script>
+        let inputEle = document.getElementById("weather");
+        let temEle = document.getElementById("tem_value");
+        let unitEle = document.getElementById("unit");
+        let weatherdeEle = document.getElementById("weather-de");
+        let locateEle = document.getElementById("locat");
+        let weatherEle = document.getElementById("weaher");
+        let btnEle = document.getElementById("btn");
+        const apikey=apikey
+
+        btn.onclick= function(){
+            if(inputEle.value==" "){
+                alert("please enter some location")
+            }
+            else{
+                loc = inputEle.value
+                url='https://api.openweathermap.org/data/2.5/weather?q={loc}&appid={API key}'
+                fetch (url).then(res=>res.json())
+                then(data=>
+                console.log(data);
+                const {name}= data
+                const feels_like= data.main
+                const discription= data.weather[0]
+                tempEle.innerText=math.floor(feels_like-273);
+                locateEle.innerText=name;
+                weatherdeEle.innerText=discription
+            })
+            .catch(()=>{
+                alert("enter valid location")
+            }
+            )
+            }
+            inputEle.value=" "
+        
+
+
+        
+    </script>
+</body>
+</html>
