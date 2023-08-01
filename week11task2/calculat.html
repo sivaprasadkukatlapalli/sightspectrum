@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculat.css">
+</head>
+<body>
+    <div class="bg-container">
+        <h2 class="heading-container">Calculator</h2>
+        <div class="container">
+            <p class="p-container" id="result">0</p>
+        
+            <div class="row">
+                <button class="datasize" onclick="clearDisplay()">C</button>
+                <button class="datasize" onclick="EnterText('%')">%</button>
+                <button class="datasize" onclick="deleteLastCharacter()">DEL</button>
+                <button class="datasize" onclick="EnterText('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="datasize" onclick="EnterText('7')">7</button>
+                <button class="datasize" onclick="EnterText('8')">8</button>
+                <button class="datasize" onclick="EnterText('9')">9</button>
+                <button class="datasize" onclick="EnterText('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="datasize" onclick="EnterText('4')">4</button>
+                <button class="datasize" onclick="EnterText('5')">5</button>
+                <button class="datasize" onclick="EnterText('6')">6</button>
+                <button class="datasize" onclick="EnterText('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="datasize" onclick="EnterText('1')">1</button>
+                <button class="datasize" onclick="EnterText('2')">2</button>
+                <button class="datasize" onclick="EnterText('3')">3</button>
+                <button class="datasize" onclick="EnterText('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="datasize" onclick="EnterText('00')">00</button>
+                <button class="datasize" onclick="EnterText('0')">0</button>
+                <button class="datasize" onclick="EnterText('.')">.</button>
+                <button class="datasize" onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function EnterText(value) {
+            const resultDisplay = document.getElementById('result');
+            const currentDisplayValue = resultDisplay.textContent;
+            resultDisplay.textContent = currentDisplayValue === '0' ? value : currentDisplayValue + value;
+        }
+
+        function clearDisplay() {
+            const resultDisplay = document.getElementById('result');
+            resultDisplay.textContent = '0';
+        }
+
+        function deleteLastCharacter() {
+            const resultDisplay = document.getElementById('result');
+            const currentDisplayValue = resultDisplay.textContent;
+            if (currentDisplayValue.length > 1) {
+                resultDisplay.textContent = currentDisplayValue.slice(0, -1);
+            } else {
+                resultDisplay.textContent = '0';
+            }
+        }
+
+        function equal() {
+            const resultDisplay = document.getElementById('result');
+            const expression = resultDisplay.textContent;
+            try {
+                const result = eval(expression);
+                resultDisplay.textContent = result; 
+            } catch (error) {
+                resultDisplay.textContent = 'error';
+            }
+        }
+    </script>
+</body> 
+</html>
